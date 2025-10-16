@@ -82,7 +82,7 @@ def showstate(state, n, threshold=1e-10):
 
 def measure(state):
     probs=[abs(a)**2 for a in state]
-    r=random.random()
+    r=random()
     c=0
     for i, p in enumerate(probs):
         c+=p
@@ -91,4 +91,5 @@ def measure(state):
             collapsed=[0]*len(state)
             collapsed[i]=1
             return result, collapsed
+
 
